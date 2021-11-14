@@ -9,12 +9,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* header*/
 header {
     padding: 20px 35px;
     background-color: #b8f086;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    top: 0;
 }
 
 header h1 {
@@ -47,27 +49,59 @@ header nav ul li a {
     font-size: 22px;
 }
 
+/*hero section*/
+.background {
+    background-image: url("/assets/images/pastel-wallpaper-20081916265123-scaled.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* about me */
+.me-me-me h2 {
+    text-align: center;
+    margin: 3.5%;
+    color: #f086d5;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.me-me-me p {
+    text-align: center;
+    margin: 3.5%;
+    color: #f086d5;
+    font-size: 20px;
+    line-height: 1.2;
+}
+/* works */
+.works h2 {
+    text-align: center;
+    margin: 3.5%;
+    color: #f086d5;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
 /* contact me */
-footer {
+.contact-me {
     background: #b8f086;
-    width: 100%;
     padding: 40px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-footer h2 {
+.contact-me h2 {
     color: #f086d5;
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
+    text-align: center;
 }
 
-footer div {
+.contact-me h3 {
     line-height: 1.5;
-    text-align: right;
-}
-
-footer a {
+    text-align: center;
     color: #f086d5;
 }
