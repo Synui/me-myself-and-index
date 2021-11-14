@@ -1,3 +1,9 @@
+:root {
+    --primary-color: rgb(94, 0, 74);
+    --secondary-color: rgb(254, 123, 103);
+    --tertiary-color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,30 +11,31 @@
 }
 
 body {
-    background-color: #b6f0ee;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--tertiary-color);
 }
 
 /* header*/
 header {
+    background-color: var(--tertiary-color);
     padding: 20px 35px;
-    background-color: #b8f086;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     top: 0;
+    z-index: 9999;
 }
 
 header h1 {
     font-size: 36px;
     font-weight: bold;
-    color: #f086d5;
+    color: var(--secondary-color);
     margin: 0;
 }
 
 header a {
     text-decoration: none;
-    color: #f086d5;
+    color: var(--secondary-color);
 }
 
 header nav {
@@ -51,42 +58,64 @@ header nav ul li a {
 
 /*hero section*/
 .background {
-    background-image: url("/assets/images/pastel-wallpaper-20081916265123-scaled.jpg");
-    height: 50%;
+    background-image: url("file:///C:/Users/jonat/Desktop/projects/challenges/me-myself-and-index/assets/css/images/Horizon-Pastel-Background.jpg");
+    height: 400px;
+    background-position: 80%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
+.background img {
+    border-radius: 50%;
+    float: right;
+    margin: 70px 150px 30px 0;
+    flex-wrap: wrap;
+}
+
 /* about me */
+.me-me-me {
+    background-color: var(--primary-color);
+}
 .me-me-me h2 {
-    text-align: center;
-    margin: 3.5%;
-    color: #f086d5;
+    color: var(--secondary-color);
     font-size: 40px;
+    text-align: center;
+    border-bottom: 4px solid;
+    padding-bottom: 20px;
+    width: 50%;
+    padding-top: 40px;
+    margin: 0 auto 35px auto;
     line-height: 1.2;
 }
 
 .me-me-me p {
     text-align: center;
     margin: 3.5%;
-    color: #f086d5;
+    padding-bottom: 40px;
+    color: var(--secondary-color);
     font-size: 20px;
     line-height: 1.2;
 }
 /* works */
+.works {
+}
+
 .works h2 {
-    text-align: center;
-    margin: 3.5%;
-    color: #f086d5;
+    color: var(--secondary-color);
     font-size: 40px;
+    text-align: center;
+    border-bottom: 4px solid;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto 35px auto;
     line-height: 1.2;
 }
 
 /* contact me */
 .contact-me {
-    background: #b8f086;
+    background-color: var(--primary-color);
     padding: 40px 35px;
     display: flex;
     justify-content: space-between;
@@ -94,7 +123,7 @@ header nav ul li a {
 }
 
 .contact-me h2 {
-    color: #f086d5;
+    color: var(--secondary-color);
     font-size: 40px;
     margin: 0;
     text-align: center;
@@ -103,5 +132,5 @@ header nav ul li a {
 .contact-me h3 {
     line-height: 1.5;
     text-align: center;
-    color: #f086d5;
+    color: var(--secondary-color);
 }
