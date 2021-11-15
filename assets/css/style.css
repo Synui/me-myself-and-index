@@ -15,15 +15,13 @@ body {
     background-color: var(--tertiary-color);
 }
 
-/* header*/
+/* header starts */
 header {
     background-color: var(--tertiary-color);
     padding: 20px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 0;
-    z-index: 9999;
 }
 
 header h1 {
@@ -55,8 +53,9 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 22px;
 }
+/* header ends */
 
-/*hero section*/
+/* hero section starts */
 .background {
     background-image: url("file:///C:/Users/jonat/Desktop/projects/challenges/me-myself-and-index/assets/css/images/Horizon-Pastel-Background.jpg");
     height: 400px;
@@ -74,20 +73,25 @@ header nav ul li a {
     flex-wrap: wrap;
 }
 
-/* about me */
+/* about me starts */
 .me-me-me {
     background-color: var(--primary-color);
 }
-.me-me-me h2 {
+
+/* combined similar h2 traits */
+.me-me-me h2, .works h2 {
     color: var(--secondary-color);
     font-size: 40px;
     text-align: center;
     border-bottom: 4px solid;
     padding-bottom: 20px;
     width: 50%;
-    padding-top: 40px;
     margin: 0 auto 35px auto;
     line-height: 1.2;
+}
+
+.me-me-me h2 {
+    padding-top: 20px;
 }
 
 .me-me-me p {
@@ -98,22 +102,37 @@ header nav ul li a {
     font-size: 20px;
     line-height: 1.2;
 }
-/* works */
-.works {
+/* about me ends */
+
+/* my works starts */
+.works-big-image, .works-small-images {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
 }
 
-.works h2 {
+.works img:hover {
+    opacity: .5;
+}
+
+.works-big-image h3, .works-small-images h3 {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
     color: var(--secondary-color);
-    font-size: 40px;
-    text-align: center;
-    border-bottom: 4px solid;
-    padding-bottom: 20px;
-    width: 50%;
-    margin: 0 auto 35px auto;
-    line-height: 1.2;
+    background-color: var(--primary-color);
 }
 
-/* contact me */
+.works img {
+    margin: 20px;
+    border-radius: 15px;
+} 
+/* my works ends */
+
+/* contact me starts */
 .contact-me {
     background-color: var(--primary-color);
     padding: 40px 35px;
@@ -132,5 +151,86 @@ header nav ul li a {
 .contact-me h3 {
     line-height: 1.5;
     text-align: center;
+    text-decoration: none;
     color: var(--secondary-color);
 }
+/* contact me ends */
+
+/* media size change starts */
+@media screen and (max-width: 980px) {
+    
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .works h2, .me-me-me h2, .contact-me h2 {
+        width: 80%;
+    }
+
+    .works-big-image, .works-small-images {
+        flex: 0 70%;
+    }
+
+    .contact-me h2 {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .works-big-image img, .works-small-images img {
+          flex: 0 32%;
+          margin-right: 0;
+          margin-top: 15px;
+          margin-bottom: 15px;
+    }
+
+    .contact-me {
+        text-align: center;
+        flex: 0 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .works h2, .me-me-me h2, .contact-me h2 {
+        width: 80%;
+    }
+
+    .works-big-image img, .works-small-images img {
+        width: 400px;
+        height: 300px;
+    }
+    
+    .works-big-image, .works-small-images {
+    }
+
+    .contact-me {
+        text-align: center;
+        flex: 0 100%;
+    }
+
+    .contact-me h3 {
+        text-align: center;
+        order: 3;
+    }
+}
+/* media size change ends */
