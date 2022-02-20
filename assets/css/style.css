@@ -139,7 +139,8 @@ header nav ul li a {
     color: var(--secondary-color);
 }
 
-.horiseon {
+.horiseon,
+.baby-game {
     position: absolute;
     bottom: 20%;
     right: 46%;
